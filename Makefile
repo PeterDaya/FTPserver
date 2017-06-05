@@ -22,3 +22,5 @@ clean:
 .PHONY: all
 all: clean default
 
+run: ftpserver
+	./ftpserver 15000

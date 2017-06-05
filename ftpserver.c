@@ -65,8 +65,13 @@ int main(int argc, char **argv) {
 		
 		printf("The user requested the file named: %s\n", fname);
 		
-		//The file name sent by the user might contain \n so it is necessary
-		//to process the string before fopen()
+		/*The file name sent by the user might contain \n so it is necessary
+		to process the string before fopen() */
+
+		/* Reminder:
+		 * Remember to incorporate proper file permissions
+		 * in FTP server for security. */
+
 		char *c;
 		if ((c = strchr(fname, '\n')))	
 			*c = '\0';
